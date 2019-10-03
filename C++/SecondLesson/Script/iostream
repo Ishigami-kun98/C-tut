@@ -1,0 +1,41 @@
+#include <iostream> // std::count
+
+Output
+
+cout è uguale a c out
+
+std :: cout << "Helloworld" <<endl;
+
+
+using namespace std;
+"Ci fa scrivere meno std"
+
+
+cioè il codice sopra diventa
+
+cout << "HelloWorld" <<endl;
+
+
+
+Input
+
+cin >> variabile
+cioè chiede in input un valore per
+la variabile = scanner.input di java
+
+Se la variabile è int e noi inseriamo
+float arrotonda per diffetto, se
+inseriamo string allora la conversione
+non è possibile, solo che al posto
+di dare errori, qui non da errore e
+assegna 0 in poche parole non solleva
+nessun errore di default sembra bello
+ma se dobbiamo chiedere con un ciclo
+while ripetutamente finche non inserisca
+l'input corretto diventa infattibile
+perciò dobbiamo gestirle noi con le
+cin.exception  voilà oppure interrogare
+cin dopo input con cin.fail();
+N.B. C++ ha molte poche exception non
+è come java che hanno exception ogni
+2 x 3

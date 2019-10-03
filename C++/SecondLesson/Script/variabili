@@ -1,0 +1,18 @@
+Variabili
+
+int value;  non viene inizializzata
+cioè viene dichiarata ma non viene
+allocata memoria per essa
+bool, int, float, double, char.
+
+Short dimezza la rappresentazione di
+bit es
+se int i ha 32 bit
+short int i ha 16 bit
+
+Long doppia la rappresentazione....
+
+Nel main possiamo farci stampare la
+dimensione della variabile con sizeof()
+
+es  cout <<sizeof(int) << endl;

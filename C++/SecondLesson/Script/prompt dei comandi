@@ -1,0 +1,31 @@
+Cosa a fatto in questa lesson
+
+accendi msys che è un prompt
+
+vai nella tua cartella con cd
+
+commandi di query:
+
+1)g++ -- version
+
+2)g++ -c "nome.cpp" -o main.o
+dice di creare l'oggetto
+
+3)g++ -c "nome.o" -o nome.exe
+creare il file .exe
+
+4)far partire il programma
+./"nome.exe"
+
+5)rm "nome.o"
+elimina object
+
+6)rm "nome.exe"
+elimina eseguibile
+
+7)g++ "nome.cpp" -o main.exe
+processione compilazione link senza
+generare il file object
+è utile quando fai controlli veloci
+se hai un progetto grande devi fare
+object file
