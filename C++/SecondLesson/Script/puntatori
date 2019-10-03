@@ -108,3 +108,18 @@ pj = &pi è una funzione sbagliata
 perchè sto dicendo che pj sta cercando
 di chiedere l'indirizoo di un indirizzo
 e non è compatibile.
+
+
+void *pi non devono esistere ;)
+
+inoltre int *****************pi esiste
+
+ma di solito viene ammessa al massimo
+
+int **pi
+
+quando si hanno piu di 2 puntatori a
+cascata, significa che abbiamo qualche
+throwble(problemi) e se è giusto
+diventa un pocchino molto difficile
+da gestire ;))))
