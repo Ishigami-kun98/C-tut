@@ -1,0 +1,48 @@
+Typedef
+
+typedef unsigned long int uli;
+
+se voglio dare un nome comodo alla variabile.
+se io nel mio codice ogni volta che serve il dato uso uli.
+e dopo mi rendo conto che non mi serve uli e devo cambiarlo,
+typedef lo nasconde all'utente che viene cambiato il valore.
+
+viene usato molto nelle classe
+
+perchè le classe vengono usate anche per nascondere le informazioni
+tra cui anche i typedef.
+
+unsigned, toglie il segno dal tipo di dato, cioè usa tutto il range del tipo
+di bit.
+
+const ci permette di dichiarare un dato non modificabile(come in nodejs)
+
+const assicura la correttezza dei metodi(we will see this later c:).
+
+Il problema sono i puntatori(coinvolgono 2 entita)
+
+se io scrivo:
+
+const int *pc;
+
+pc è un puntatore a interi const, cioè punta a interi non modificabile.
+infatti pc è modificabile, ma punta a variabili const.
+
+pc = &i; fattibile
+
+*pc = 2; errore
+
+
+another way:
+
+int * const pc2;
+
+adesso è pc2 è un constante puntatore di int, cioè se non gli do valore
+ora non posso piu farlo dopo.
+
+
+last way:
+
+const int * const pc3 = &i;
+pc3 è un puntatore costante a interi costanti.
+puo puntare a costati, ma una volta puntata non puoi cambiare i valore

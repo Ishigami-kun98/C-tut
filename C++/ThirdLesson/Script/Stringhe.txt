@@ -1,0 +1,23 @@
+Stringhe sono tecnicamente una sequenza di caratteri terminati dal carattere
+speciale delle string, e queste sono stringhe PRIMITIVE.
+
+string a = "Fabiononèfasciamassimamanonvienemai \0";
+
+\0 = carattere speciale di fine stringa
+
+char str[] = "DavideèFasciaPezzenteMaSeNeVa \0"
+in questo caso il compilatore persca da valore il numero di grandezza dell
+array,
+N.B è sempre statico, che non cambiera mai la grandezza.
+questa viene sempre classificata come stringa primitiva.
+
+Abbiamo visto che si puo usare il puntatore per array.
+
+char *pfabio = str;
+
+cout << pfabio <<endl;
+mi stampa la stringa.
+
+possiamo usare i metodi delle string includendo string
+
+#include <string>

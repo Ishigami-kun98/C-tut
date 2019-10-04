@@ -1,0 +1,31 @@
+Reference
+
+int &ref;
+
+& = reference
+
+Non si puo avere una reference non assegnato, in fase di istanziazione
+e può essere qualsiasi valore della stessa istanza, in questo caso int.
+
+int n = 0;
+int &ref = n;
+
+in poche parole, è come se n ha assunto un nuovo nome.
+
+Quando chiamiamo una funzione passiamo dei dati, durante il passaggio viene
+copiato il dato di partenza con la funzione, lo possiamo fare con i puntatori.
+
+Solo che il reference non è usato come la variabile di partenza
+
+ref = 10;
+
+int pippo = ref;
+
+il reference creano la condivisione dei dati, ma mantengono la sintassi originali.
+A differenza dei puntatori, i reference deve sempre indicare una variabile, ed esso
+non puo essere null.
+
+adesso non serve a tanto(sembra), ma serve moltissimo per i passaggi di dati alle
+funzioni.
+
+Personalmente preferisco usare le reference per le funzioni che i puntatori.

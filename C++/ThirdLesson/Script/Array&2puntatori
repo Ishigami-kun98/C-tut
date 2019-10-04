@@ -1,0 +1,63 @@
+Array
+
+int array[100];
+int *pi = array;
+
+Perchè funzica??? è una funzione che c'è in c e viene ereditata da c++
+
+allora pi punta l'indirizzo del primo elemento dell'Array cioè
+
+pi = array == pi = &array[0];
+
+pi + 1 == pi = &array[1];
+
+per cambiare il valore invece
+
+*(pi +1) = 20
+
+Che palle scrivere cosi tanto, allora c++ fornisce:
+
+pi[1] == array[i]
+
+
+ArrayBidimensionale
+
+int array[10][20];
+nei casi di array bidimensionali i puntatori sono gestiti diversamente.
+
+int (*p2)[20];
+
+si legge così, p2 è un puntatore di int a un arraymultidimensionale con 20 elementi.
+
+la prima dimensione dell array è implicita, la seconda è esplicita.
+
+se
+
+int *p3[20];
+
+si legge p3 è un puntatore di 20 elementi, senza la parentesi, è un puntatore
+unidimensionale.
+
+Remember as well those things.
+
+si legge dal nome della variabile e si va a destra, finche non incontri una ) o ;,
+una volta incontrata allora si inizia a leggere da sinistra, e finito sinistra si ritorna
+a destra finche non finisce di scrivere tutto.
+
+int n = pi - pj;
+
+dammi il numero di elementi che vivono dei due puntatori.
+
+2puntatori NON si Possono SOMMARE.
+
+2Puntatori si possono Confrontare.
+
+2Puntatori sono identici se e solo se contengono lo stesso indirizzo.
+
+TUTTE queste operazioni confrontano i indirizzo, non i valori dei elementi.
+
+bool ok = (pi > pj);  //Confronta i indirizzi
+
+se si vuole confrontare i elementi si fa:
+
+bool ok = (*pi > *pj);  //confronta i dati;

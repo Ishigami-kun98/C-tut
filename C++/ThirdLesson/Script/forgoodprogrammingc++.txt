@@ -1,0 +1,3 @@
+Un buon programma c++ non puo non avere puntatori, al massimo sono nascosti.
+Qui il corso fara i puntatori espliciti, cioè costruiremo tutte le librerie
+da zero.
