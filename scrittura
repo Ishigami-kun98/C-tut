@@ -1,9 +1,0 @@
-int main(){
-codice.....
-}
-
-if (std::cin.fail())
-  std ::cout <<"errore" <<std ::endl;
-else
-  std ::count <<"funziona
-  ma fabio non viene" <<endl;
