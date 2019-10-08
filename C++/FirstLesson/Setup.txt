@@ -1,0 +1,19 @@
+in this course useremo il compilatore GNU GCC (con compilatore G++)
+
+Download
+Windows : MinGW
+NOTA: Usare l'installer per avere l'ultima versione diponibile. L'installer contiene già
+(Follow video on youtube to how to install g++ with MinGW)
+
+Download
+MSYS, shell Linux-like
+Windows: Installer stand-alone
+
+We will use the prompt MSYS normal
+
+
+Setup ambiente C++.
+
+Andare sulla variabile ambiente del sistema, su variabili ambiente cliccare add
+dopo di che aprire la cartella dove è installato c++ e copiare il path del bin e 
+attaccarlo sopra all ambiente sistema.
