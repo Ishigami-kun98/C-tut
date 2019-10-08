@@ -1,0 +1,7 @@
+Sistema romano di addizione overe ogni simbolo ha un valore.
+
+I = 1	V = 5	X = 10	L = 50	C = 100, ....
+
+I,X,C,M possono essere ripetuti 3 volte
+
+V L D solo una volta

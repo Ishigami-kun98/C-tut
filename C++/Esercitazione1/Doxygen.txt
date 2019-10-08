@@ -1,0 +1,6 @@
+come doc di java che ti crea le funzioni da sole
+
+Scriviamo in
+/**
+ *Cosa fa
+**/
