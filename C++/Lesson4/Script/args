@@ -1,0 +1,51 @@
+Args
+
+con
+int main(int argc, char const *argv[]){
+
+//argc è la lunghezza dell array argv
+
+
+
+}
+
+una volta compilata per farlo funzicare
+./nome.exe "Valoreprimo array" "Valore secondo array"
+di argv
+vengono trattati tutti come string
+
+Per provare creare un cpp con
+
+
+#include <iostream>
+
+//using namespace std; non lo uso piu per spiegare meglio cosa sta andando
+
+int main(int argc, char const *argv[]) {
+
+  for (size_t i = 0; i < argc; i++) {
+    std ::cout << argv[i] << std ::endl;
+  }
+  return 0;
+}
+
+dopo compilato
+fare
+./"Nome".exe askdj askjdkw asdkj
+
+e
+
+$ ./"Nome".exe
+
+
+Inoltre il primo elemento cioè argv[0] = 0 per default
+percio quando andiamo a manodoperare i nostri input iniziamo con argv[1]
+
+Se usiamo argv, dobbiamo controllare che argv ha almeno 2 argomenti
+per il problema appena esposto
+perciò
+
+if(argc < 2){
+std :: cerr << "Error" << std::endl;
+return type(0 se int);
+}

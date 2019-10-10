@@ -1,0 +1,106 @@
+dati automatici
+
+Tutti i dati visti prima
+string,int,array,puntatori, reference
+
+Questi tipi di dati sono conosciuti dal compilatore
+e il compilatore lo mette da qualche parte.
+
+il compilatore sa come costruire, quanti sono grossi, memoria riservata.
+e sono riservati nella memoria stack, dove vengono memorizzate le variabili
+da lavoro.
+
+Tutte queste variabili sono create automaticamente dal programma, quando
+per esempio
+int i = 100;
+il compilatore quando ha fatto il parsing lo mette nella memoria
+cioè automaticamente create e automaticamente distrutte quando terminiamo
+una volta finito vengono rimosse dallo stack.
+
+
+
+dati Globali(Sono fuori dal main e funzioni)
+Accessibili da qualsiasi programma.
+e sono le prime a essere create quando il programma viene lanciato, per essere
+accessibili da punti del programma e sono i ultimi ad essere rimosse quando
+chiudiamo il programma
+
+
+dati Locali(Dentro al main o funzione)
+una volta finita il main o funzione in cui è vengono subito eliminati.
+
+Se sbagliamo locazioni possiamo ottenere lo stackoverflow come problema e non
+potremo piu continuare
+
+
+Dati limitati da scope({})
+{
+  int i = 0;
+}
+la i viene eliminata appena finisce il }
+
+è possibile prevenire questo, cioè possiamo rendere globale il suo ciclo di vita
+ma locale il suo utilizzo.
+
+static:
+{
+  static int i = 0;
+}
+
+
+Dati dinamici
+Sono dati creati a runtime cioè non è possibile prevedere la grandezza
+e i dati dinamici non sono memorizzati sullo stack ma sulla ram, ciò significa
+che abbiamo molto piu spazio(Tutta la ram) per i dati dinamici
+tutti i dati sono sulla heap della ram, non sullo stack.
+
+I dati dinamici sono tutti i dati globali allocati in memoria esplicitamente usando
+la keyword new
+
+new:
+new int;
+ho chiesto di allocare una int nella ram
+
+serve pero sapere l'indirizzo per percio ci costringono a usare i puntatori
+
+int * puntdin = new int[1000000] alloca 1000000 int nella heap di ram che
+non ci sta ovviamente.
+
+N.B. i dati dinamici non vengono mai uccisi dal programma stesso, dobbiamo
+rimuoverlo noi, se un programma dichiara dati dinamici che non si usa provoca
+il memory lick, che è molto grave, perciò è compito nostro creare e uccidere
+i dati dinamici
+
+Sintassi consigliata(delete)
+
+int * pippo = new int;
+//usanza del puntatore
+delete pippo;
+
+per distruggere i dati dinamici devi fare delete puntatore
+
+DELETE ARRAY
+Se abbiamo un array
+int * pippo = new int[10000];
+delete pippo uccide solo il primo intero
+
+allora dobbiamo usare
+
+delete[] pippo;
+
+N.B. abbiamo dichiarato un array dinamico, i array statici devono avere
+dimensione nota, cioè non int p = 100, ma direttamente 100, quelli
+dinamici possono avere p come ingresso.
+
+Una volta fatto la delete[] pippo
+pippo continua a puntare a quell indirizzo, e troviamo sempre la solita roba
+appena cancellata, perchè? la memoria non è come l'acido muriatico che la passi
+ed è tutto nuovo pulito, cioè useremmo memoria che non è valida.
+
+perciò ogni volta dopo la delete assegnare nullptr to puntatore pippo
+
+pippo = nullptr;
+
+Come Abbiamo visto se stacchiamo dal puntatore la memoria dinamica, prima di
+delettarlo, e se non abbiamo ricordato l'indirizzo precedente, allora la avviene
+memor lick ed gestione di memoria sbagliata, e puo causare grossi danni

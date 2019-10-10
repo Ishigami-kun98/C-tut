@@ -1,0 +1,32 @@
+non fare
+
+int paperino[size];
+questo è un ibrido, non è nè statico che dinamico.
+
+cioè stiamo creando un array dinamico nella stack che
+deve essere statico.
+
+non è standard ed è meglio non farlo così
+
+Array statico
+
+int paperino[100]	ok
+
+int size = 100	
+int paperino[size]	no
+
+
+
+Array dinamico
+int size = 100;
+int * punt = new int[size];	ok
+
+Memory lick
+
+int * pippo = new int [1000];
+pippo = "Cambiaindirizzo";
+delete[] pippo;
+pippo = nullptr;
+
+abbiamo provocato un memory lick, non recuperemo mai piu
+i 1000 valori dell array, ed è gravissimo

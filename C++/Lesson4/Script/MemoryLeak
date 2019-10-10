@@ -1,0 +1,50 @@
+int * puntdin = new int[1000000] alloca 1000000 int nella heap di ram che
+non ci sta ovviamente.
+
+N.B. i dati dinamici non vengono mai uccisi dal programma stesso, dobbiamo
+rimuoverlo noi, se un programma dichiara dati dinamici che non si usa provoca
+il memory lick, che è molto grave, perciò è compito nostro creare e uccidere
+i dati dinamici
+
+Sintassi consigliata(delete)
+
+int * pippo = new int;
+//usanza del puntatore
+delete pippo;
+
+per distruggere i dati dinamici devi fare delete puntatore
+
+DELETE ARRAY
+Se abbiamo un array
+int * pippo = new int[10000];
+delete pippo uccide solo il primo intero
+
+allora dobbiamo usare
+
+delete[] pippo;
+
+N.B. abbiamo dichiarato un array dinamico, i array statici devono avere
+dimensione nota, cioè non int p = 100, ma direttamente 100, quelli
+dinamici possono avere p come ingresso.
+
+Una volta fatto la delete[] pippo
+pippo continua a puntare a quell indirizzo, e troviamo sempre la solita roba
+appena cancellata, perchè? la memoria non è come l'acido muriatico che la passi
+ed è tutto nuovo pulito, cioè useremmo memoria che non è valida.
+
+perciò ogni volta dopo la delete assegnare nullptr to puntatore pippo
+
+pippo = nullptr;
+
+Come Abbiamo visto se stacchiamo dal puntatore la memoria dinamica, prima di
+delettarlo, e se non abbiamo ricordato l'indirizzo precedente, allora la avviene
+memor lick ed gestione di memoria sbagliata, e puo causare grossi danni
+
+int * pippo = new int[10];
+pippo += 100;
+*pippo[100] = 0;
+delete[] pippo;
+pippo = nullptr;
+Avviene sempre una memory leak perchè sto tentando di eliminare 100
+elementi da un array che ha solo i primi 10 elementi e l'ultimo elemento
+al 100 posizione, viene registrata come memory access error

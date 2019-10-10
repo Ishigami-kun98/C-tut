@@ -1,0 +1,30 @@
+int sx = 1000;
+char dx = 9;
+
+dx = sx; è un cast implicito
+Ci sono cast che danno errori percio bisogna stare attenti.
+
+C++ fornisce alcuni metodi per le conversioni di cast
+
+dx = static_cast<char>(sx);
+static_cast<"tipo">(variabile che vuoi eguagliare il valore nel tipo indicato)
+
+const_cast viene usato solo se vogliamo manipolare dei dati che sono protetti
+costante
+
+const_cast<"tipo" *>("PuntatoreDelTipo");
+
+es:
+
+const int *pci;
+int * pi = const_cast<int *> (pci)
+
+
+reinterpret_cast serve per reinterpretare i bit puntati dagli puntatori e
+possiamo convertire un puntatore a char a un puntatore a interi.
+Prende un indirizzo della memoria e lo rende visibile a un altro puntatore Dati
+è una cosa che si fa in C per maneggiare i dati, perciò c'è anche in c++, ma
+in realta non dovrebbe mai servire.
+
+char * pc = 0;
+int * dst = reinterpret_cast<int *>(pc);

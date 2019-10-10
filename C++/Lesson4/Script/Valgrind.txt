@@ -1,0 +1,5 @@
+è solo su linux
+è un salvagente per la gestione della memoria.
+se noi non chiamiamo codice con problemi valgrind non puo tracciare i problemi
+
+Se noi non testiamo filo per segno i nostri codice valgrind non serve a nulla
