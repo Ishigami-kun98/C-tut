@@ -1,0 +1,4 @@
+g++ -g -c roman.cpp
+g++ -c roman.cpp -o roman.o
+g++ -c main.cpp -o main.o
+g++ roman.o main.o -o main.exe
