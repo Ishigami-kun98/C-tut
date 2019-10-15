@@ -1,0 +1,110 @@
+void funct1(double d){
+  d = 10;
+}
+è il passaggio di valore, there is 3 way to pass the value into the Function
+from :
+-value
+-puntatore
+-references
+
+se abbiamo un valore piccolo e possibile avere piu copie perche non cambia tanto
+invece se è molto grosso dobbiamo passare il dato senza duplicazione but with
+the condivision of data. e possiamo farlo attraverso i puntatori.
+
+es possiamo avere un array enorme di double
+
+double * pdd = double[1000000000000000000000000000000000000000];
+
+passo solo l'indirizzo di memoria della array
+
+funct2(pdd);
+
+se io ho in mano dati molto grossi posso passarlo attraverso condivisione di dati
+
+double d3;
+funct3(d3);
+
+passaggio di puntatori crea condivisione di dati.
+
+void funct3(double &d3){
+
+}
+
+oppure
+
+
+double d3;
+funct3(&d3);
+
+void funct3(*d3){
+
+}
+
+questo è il passaggio per references
+
+
+void funct4(double a[]){
+
+}
+
+a[] = *a
+
+cioè stiamo passando un puntatore.
+
+struct myarray{
+  int size;
+  double * data;
+}
+myarray *a;
+void funct5(const myarray *a){
+  for(int i = 0; i < a -> size; i++){
+    a -> data[i] = 0;
+  }
+}
+qui abbiamo una trappola, perchè funziona?
+perchè la const viene applicato solo al primo strato, perciò
+i dati interni possono essere modificabili.
+con la const non c'è modo di proteggere le struct
+
+si possono proteggere solo dentro le classi
+
+Chi è il proprietario di quei dati? funzione o chiamante
+
+chi chiama il dato è il proprietario.
+
+se una funzione globale genera e cede il dato, allora è il chiamate che si
+occupa a fare il delete, e questo complica la gestione del programma.
+
+void funct6(int a, int b = 20, int c = 30){
+
+}
+
+cosa fa?
+
+funct6(1,2,3)
+a = 1   b = 2   c = 3;
+
+funct6(1,2)
+a = 1, b = 2, c = 30;
+
+funct6(1)
+a = 1, b = 20, c = 30;
+
+funct6()
+error.
+
+
+inline void funct7(){
+
+}
+si applica alle definizione di funzioni o funzioni membro come forma di ottimizzazione.
+Essa è una speciale direttiva al compilatore che, se eseguita, consiste nel sostituire
+la chiamata a funzione con il corpo della funzione stessa
+meccanismo di salvataggio su stack, poi la funzione fa quello che deve fare.
+quello che succede è un roll back.
+si usa quando vogliamo rendere efficente il codice.
+
+Le funzioni inline sono a discrezione di compilatore, il compilatore puo decidere
+che quella funzione puo o non puo essere messa inline
+
+Se abbiamo una funzione che vengono chiamate quasi sempre usate inline.

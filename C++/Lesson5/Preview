@@ -1,0 +1,10 @@
+abbiamo visto di visibilita di variabili e dati
+tutte le variabili non globali sono locali che vengono istanziati fuori
+da qualunque funzione
+
+e se sono dichiarati nel file header sono accessibili da chiunque
+
+invece quelli dati locali hanno una vita locale, e all'uscita della funzione
+vengono rimossi se sono automatici
+
+Se vogliamo rendere persistente sta roba puoi usare la keyword static
