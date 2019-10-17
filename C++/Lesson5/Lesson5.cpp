@@ -13,11 +13,11 @@ void funct2(double *pd){
 }
 
 //Chiamata di funct1
-double dd = 3.14;
-funct1(dd);
+//double dd = 3.14;
+//funct1(dd);
 
 int main(int argc, char *argv[]) {
-
+  /*
   int *aint = new int[100];
   int **matrix = nullptr;
   //puntatori di puntatori agli interi
@@ -57,7 +57,7 @@ int main(int argc, char *argv[]) {
 
   delete[] aint;
   aint = nullptr;
-
+*/
   return 0;
   //Abbiamo finito con i dati
 }
