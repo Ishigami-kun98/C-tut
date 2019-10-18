@@ -1,0 +1,3 @@
+msys
+in the path that have makefile
+write make
