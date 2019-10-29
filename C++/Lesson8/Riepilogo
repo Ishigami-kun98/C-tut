@@ -1,0 +1,17 @@
+Ogni classe deve avere per forza un costruttore di default
+Ogni costruttore inizializza.
+
+Quello che abbiamo fatto noi di costruttore default inizializza il debuffer
+con size 0
+
+Ogni classe deve avere un distruttore
+che si occupa di rimuovere tutti i dati del costruttore.
+Ogni volta che la classe main finisce da solo si autochiama.
+
+Un altro fondamentale(Non è obbligatorio ma piu o meno si) è il clone
+perchè se non lo creaiamo noi, allora lo fa il compilatore, ed è un
+problema, perchè ci restituisce un altro debuffer con il puntatore
+alla stessa zona di memoria
+Invece il nostro clone deve avere i stessi dati ma non con la
+memoria condivisa con i puntatori, cioè deve essere dipendente
+solo dal proprio puntatore.
