@@ -1,0 +1,24 @@
+Utilita degli metodi(metodi helper)
+i metodi che garantiscono l'immunitabilita delle classi possono essere usate.
+Ci serve dentro alle classi una funzione identificata che stampa i procedimenti
+ovviamente lo possiamo fare sul main ma se lo facciamo dentro le classi è meglio
+il void print che abbiamo messo è un metodo di helper
+
+size_type è un nome di comodo per mascherare un tipo
+
+Oggi ridefiniamo l'assignature del nuovo operatore di <<
+
+#include <fstream>
+offstream scrivere.
+
+
+change the [] function.
+
+la main2 serve per testare le robe
+per creare la main 2 devi togliere main.exe dal makefile
+
+
+Serializzazione completa di operator<<
+così puo accedere agli dati privati della classe
+si chiama anche escamotage
+E si usa la chiave friend 

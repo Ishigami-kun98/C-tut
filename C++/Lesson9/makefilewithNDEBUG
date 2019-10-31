@@ -1,0 +1,2 @@
+il codice piu veloce possibile devi aggiungere -D NDEBUG
+così g++ -c -D NDEBUG -03 main.cpp -o main.o
