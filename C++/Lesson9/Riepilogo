@@ -21,4 +21,6 @@ per creare la main 2 devi togliere main.exe dal makefile
 Serializzazione completa di operator<<
 così puo accedere agli dati privati della classe
 si chiama anche escamotage
-E si usa la chiave friend 
+E si usa la chiave friend
+
+main3 per testare input output, ma non ho voglia di testare se funziona o no
