@@ -10,9 +10,10 @@ struct voce{
   std::string ntel;
 
   //se facciamo così il costruttore di default sparisce, cioè non viene piu visto
-  voce(std::string cognome,
-  std::string nome,
-  std::string ntel);
+  voce();
+  voce(const std::string cognome,
+  const std::string nome,
+  const std::string ntel);
   //Se vogliamo il costruttore di default bisogna esplicitarlo
 };
 
