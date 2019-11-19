@@ -1,0 +1,107 @@
+funzioni template:
+
+-swap prende in input 2 elementi e li scambia
+
+swap di int     void swap(int &a, int &b){ int c = a; a = b; b = c}
+note c = a non è un assegnamento, ma un inizializzazione
+
+swap contiene istruzioni in cui tutti i tipi di dati c'è lo hanno.
+allora bisogna generalizzarlo
+
+questo è per int, ma puo farlo per qualsiasi tipo di dato.
+
+template <typename T>
+void swap(T &a, T &b){
+....
+}
+
+template significa funzione generale
+
+N.B. il template non esiste finche non viene eseguita, cioè esiste e valutato solo se è
+usato.
+
+questo dal punto di vista del test is a big problem
+
+i tipi template vengono dedotti dal compilatore automaticamente.
+
+se vogliamo dare in ingresso un tipo da dato specifico fammo:
+
+swap<double>(a,b); //adesso ci dà errore perchè passo interi al posto di reference
+
+
+Anche le classi possono essere template cioè
+
+template <typename T>
+class try{
+public:
+  typedef unsigned int size_type;
+ //ogni int verrà sostituito con T
+ try(size_type sz, const T &value);
+ //il T value come ingresso non va tanto bene, se prima es era un int, adesso non si sa di preciso cosa è
+ //potrebbe valere 1 gb anche mettere il reference per l'efficienza, il const per assicurare che non venga
+ //variato, ogni volta che abbiamo un tipo generico, è suggerito mettere reference, e const anche per return
+}
+possiamo
+
+clas..{
+  public:
+    ...
+    typedef T value_type; //serve per algoritmi della libreria standard.
+}
+
+codice con estensione hpp è una classe templata
+
+prendo in esempio dbuffer
+
+
+
+la libreria standard si aspetta questo nome dei iteratori
+
+class const_iterator;
+
+class iterator{
+  public:
+    typedef std::random_access_iterator_category;
+    typedef T ...
+    typedef ptrdiff_t ...
+    typedef T* ...
+    typedef T& ...
+    //è standard, adesso è un guscio vuoto.
+    iterator operator--(){}
+    iterator operator--(int){}
+    iterator operator++(){}
+    iterator operator++(int){}
+    iterator operator+(offset){}
+    iterator operator-(offset){}
+  class const_iterator{.................}
+  reference operator* () const{
+  ....
+  }
+  ~iterator(){
+
+  }
+  iterator(){
+  ....
+  }
+}
+raggionevolmente deve avere qualcosa, nella classe container, e bisogna trovare un modo per
+passare dati da container a iteratori così che possa essere esposto all esterno, e tutto
+questo viene fatto dal costruttore iterator, che vive proprio in fondo
+
+dopo abbiamo l'interfaccia, il metodo piu importanto è il metodo di dereferenziamento
+che è reference operator*() const{...}
+è standard.
+
+i iteratori devono cedere dati da reference.
+
+ci spostiamo da destra a sinistra iterator operator--(){} e iterator operator++(){}
+iterator operator--(int){} ....
+
+e iterator operator-(offset){}
+
+metodi di confronto per iteratore, cioè bool operator>= ... <=.... ==... >.... <...
+
+Metodi privati dipende dai dati che deve esporrrre, un iteratore puo essere qualsiasi cosa
+
+il c++ usa un iteratore di inizio e uno di fine, questo iteratore di fine si usa per verificare
+se l'iteratore corrente non ha raggiunto la roba di fine
