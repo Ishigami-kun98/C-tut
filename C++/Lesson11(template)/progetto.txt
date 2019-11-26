@@ -1,0 +1,17 @@
+se ci chiede di implementate i iterator, significa che dobbiamo farli entrambi
+
+A volte invece puo chiederci di implementare i iterator che utilizziamo
+
+Da standard i iteratori non si usano piu
+se nella nostra classe container abbiamo dei dati da strutturare, allora i iteratori
+di prima possono non esistere piu, perchè la classe si è ristrutturata,
+allora i iteratori si possono usare solo se le classi container non cambia di struttura
+
+se no dobbiamo praticamente cambiare tutti i iteratori.
+
+A il prof piace iteratore random,
+
+es. se vogliamo la posizione 42 allora c'è
+
+Se usiamo iteratore forward allora il progetto viene penalizzato, min da 1 punto di
+penalizzazione

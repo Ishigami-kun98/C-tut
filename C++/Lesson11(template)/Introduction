@@ -105,3 +105,7 @@ Metodi privati dipende dai dati che deve esporrrre, un iteratore puo essere qual
 
 il c++ usa un iteratore di inizio e uno di fine, questo iteratore di fine si usa per verificare
 se l'iteratore corrente non ha raggiunto la roba di fine
+
+
+////////////////////////////////////////N.B/////////////////////////////
+ristrutturemo il forward_iterator.h
